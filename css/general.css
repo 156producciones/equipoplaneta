@@ -16,4 +16,5 @@ a {
 button {
     background-color: #ffffff;
     border: none;
+    cursor: pointer;
 }
