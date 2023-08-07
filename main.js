@@ -12,5 +12,5 @@ document.getElementById('menu-actions-close').addEventListener('click', () => {
     document.getElementById('menu-container').style.animation = 'fadeOut 0.5s'
     setTimeout(() => {
         document.getElementById('menu-container').style.display = 'none'
-    }, 600);
+    }, 400);
 })
