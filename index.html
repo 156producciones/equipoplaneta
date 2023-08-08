@@ -5,16 +5,21 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Equipo Planeta</title>
-    <link rel="icon" type="image/x-icon" href="/images/logo.png">
+    <link rel="icon" type="image/x-icon" href="./images/logo.png">
 
     <!-- Styles -->
-    <link rel="stylesheet" href="css/general.css">
-    <link rel="stylesheet" href="css/nav.css">
-    <link rel="stylesheet" href="css/animations.css">
+    <link rel="stylesheet" href="./css/general.css">
+    <link rel="stylesheet" href="./css/nav.css">
+    <link rel="stylesheet" href="./css/banner.css">
+    <link rel="stylesheet" href="./css/animations.css">
 
     <!-- Scripts -->
     <script defer src="main.js"></script>
     <script defer src="./js/nav.js"></script>
+    <script defer src="./js/banner.js"></script>
+
+    <!-- Supabase -->
+    <script src="https://unpkg.com/@supabase/supabase-js@2"></script>
 
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -26,6 +31,7 @@
 </head>
 
 <body>
+    <!-- NAVIGATOR -->
     <nav>
         <div id="logo-container">
             <img src="images/logo.png" alt="Logo de Equipo Planeta">
@@ -42,6 +48,8 @@
             <button id="burguer"><i class="fa-solid fa-bars"></i></button>
         </div>
     </nav>
+
+    <!-- RIGHT MENU -->
     <div id="menu-container">
         <div id="menu">
             <div id="menu-actions">
@@ -57,6 +65,13 @@
             </div>
         </div>
     </div>
+
+    <!-- BANNER -->
+    <section id="banner">
+        <button id="banner-r">DERECHA</button>
+        <button id="banner-l">IZQUIERDA</button>
+        <img id="ariel" src="./images/ariel/step.png" alt="">
+    </section>
 </body>
 
 </html>
