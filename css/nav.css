@@ -1,22 +1,19 @@
 
 nav {
+    width: 90%;
+    margin: 1em auto;
+
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 0 5em;
-    margin-top: 1em;
+    flex-wrap: wrap;
 }
 
 
-
-#logo-container {
-    width: 7em;
-    height: 7em;
-}
 
 #logo-container img {
-    width: 100%;
-    height: 100%;
+    width: 7em;
+    height: 7em;
 }
 
 
@@ -25,10 +22,13 @@ nav {
     display: flex;
     align-items: center;
     gap: 1em;
+    flex-grow: 1;
+    flex-shrink: 3;
+    padding-left: 2em;
 }
 
 #section-links-container a {
-    padding: 0.5em 0.7em 0.5em 0.5em;
+    padding: 0.5em;
     border-radius: 2em;
     display: flex;
     align-items: center;
@@ -50,6 +50,10 @@ nav {
     display: inline-block;
     width: 2em;
     height: 2em;
+}
+
+#section-links-container a span {
+    padding-right: 0.2em;
 }
 
 #games-link {
@@ -101,13 +105,15 @@ nav {
 }
 
 
+
 #login-burguer-container {
+    width: 7em;
+    height: 7em;
     display: flex;
     gap: 1em;
     align-items: center;
-    justify-content: center;
-    height: fit-content;
-    position: relative;
+    justify-content: end;
+    flex-shrink: 1;
 }
 
 #login-burguer-container span {
@@ -146,7 +152,6 @@ nav {
     flex-direction: column;
     background-color: #ffffff;
     padding: 0 3em;
-    /* transform: translateX(100%); */
 }
 
 #menu-actions {
@@ -188,3 +193,51 @@ nav {
 #menu a:last-child {
     border-bottom: 1px solid #cac9c9;
 }
+
+
+@media screen and (max-width: 992px) {
+
+    #logo-container {
+        flex-grow: 0;
+    }
+
+    #section-links-container {
+        justify-content: start;
+
+        & span {
+            display: none;
+        }
+    }
+
+    #login-burguer-container {
+        flex-grow: 0;
+    }
+
+
+  
+}
+
+@media screen and (max-width: 600px) {
+    #logo-container {
+        flex-grow: 1;
+        order: 1;
+    }
+
+    #section-links-container {
+        order: 2;
+        justify-content: center;
+        flex-grow: 1;
+        padding: 1em;
+    }
+
+    #login-burguer-container {
+        order: 1;
+        flex-grow: 1;
+    }
+
+    #menu {
+        padding: 0 2em;
+    }
+}
+
+/* @media screen and (max-width: ) */
